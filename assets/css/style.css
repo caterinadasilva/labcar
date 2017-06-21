@@ -30,7 +30,6 @@ display: block;
 body {
 line-height: 1;
 font-family: 'Raleway', Helvetica, Arial, sans-serif;
-font-weight: 500;
 background-color: #F7B617;
 color: #fff;
 }
@@ -159,7 +158,11 @@ margin: 0;
 }
 
 /* Especial */
-
+.box {
+	color: #fff;
+	background-color: #F7B617;
+    padding: 2em;
+}
 /*
 //	NAVBAR
 */
@@ -195,11 +198,6 @@ header {
 	justify-content: flex-end;
 	flex-direction: row;
 }
-header .box {
-	color: #fff;
-	background-color: #F7B617;
-    padding: 2em;
-}
 header .box .lead {
 		margin: 1em 0 1em;
     font-weight: 500;
@@ -230,4 +228,20 @@ header .box.xs {
 }
 .box.xs h2 {
     margin-bottom: 1em;
+}
+/*
+// 	APP
+*/
+#app {
+    padding: 3em 0;
+}
+#app .box {
+    border: 1px solid;
+}
+#app .box img {
+    margin: 0 auto;
+    display: block;
+}
+#app .box .left h2 {
+	margin: 2em 0 1em;
 }
