@@ -1,0 +1,30 @@
+@media screen and (min-width: 768px) {
+	.navbar-default {
+		display: flex;
+	    align-items: center;
+	    padding: 0;
+	    margin: 0;
+	}
+}
+@media screen and (max-width: 767px) {
+	.navbar-default {
+	    padding: 10% 0;
+	}
+	.navbar-toggle {
+	    margin: 0 5em 0 1em;
+	    border: none;
+	    background: transparent;
+	    float: left;
+	}
+	.navbar-default .navbar-collapse {
+	    background-color: #fff;
+	    margin: 10% 0;
+	    width: 101%;
+	    position: absolute;
+	    left: -1px;
+	}
+	.navbar-default .navbar-nav>li>a {
+		padding-top: 30px;
+    	padding-bottom: 30px;
+	}
+}
