@@ -30,7 +30,8 @@ display: block;
 body {
 line-height: 1;
 font-family: 'Raleway', Helvetica, Arial, sans-serif;
-background-color: #f9f9f9;
+background-color: #F7B617;
+color: #fff;
 }
 ol, ul {
 list-style: none;
@@ -49,20 +50,8 @@ border-spacing: 0;
 }
 
 /* ESTILOS BÁSICOS */
-.container {
-display: block;
-width: 100%;
-max-width: 960px;
-margin: 0 auto;
-}
-header {
-background-color: #6730EC;
-color: white;
-padding: 5em 0 2em;
-margin-bottom: 5em;
-}
 h1, h2, h3, h4, h5, h6 {
-font-family: 'Great Vibes', cursive;
+font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
 h1 {
 font-size: 3rem;
@@ -75,25 +64,6 @@ font-size: 1.5rem;
 }
 h4 {
 font-size: 1.5rem;
-}
-.lead {
-max-width: 660px;
-margin: 2em auto 1em;
-font-size: 120%;
-}
-form {
-width: 90%;
-margin: 0 auto;
-max-width: 600px;
-padding: 0 5%;
-font-size: 85%;
-}
-label {
-display: block;
-font-weight: 800;
-color: #6730EC;
-margin: 1.2em 0 .5em;
-float: left;
 }
 input, select {
 width: 100%;
@@ -108,43 +78,37 @@ background: rgba(255,255,255,.9);
 input::placeholder {
 color: gray;
 }
+a, a:hover, a:focus, a:active,
+.btn, .btn:hover, .btn:active, .btn:focus {
+	transition: .5s ease all;
+}
 .btn {
-display: block;
-text-align: center;
-font-weight: 800;
-cursor: pointer;
-color: #6730EC;
-background-color: transparent;
-letter-spacing: 1px;
-font-size: 90%;
-padding: 1em 1.5em;
+color: #fff;
 transition: .5s ease all;
-margin: 2em auto 1em;
-border: 1px solid #6730EC;
-width: 100%;
+border: 1px solid #fff;
 }
 .btn:hover, .btn:active, .btn:focus {
-background-color: #552cb9;
+background-color: #fff;
 transition: .5s ease all;
-color: #fff;
+color: #F7B617;
 }
 p {
 font-family: 'Raleway', Helvetica, Arial, sans-serif;
-display: block;
-margin: 1em 0;
-line-height: 1.4;
-text-align: justify;
-}
-span {
-border-bottom: 2px #6730EC solid;
-font-weight: 700;
 }
 b {
 font-weight: 800;
-color: #6730EC;
+color: #fff;
 }
 small {
 font-size: .8rem;
+}
+menu {
+	background-color: #fff;
+	color: #2B2B2B;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
 }
 footer {
 display: block;
@@ -152,6 +116,7 @@ width: 100%;
 margin: 5em 0 0;
 padding: 0 0 2em;
 overflow: hidden;
+background-color: #2B2B2B;
 }
 /*INPUT CHECK*/
 input[type|=check] {
@@ -171,3 +136,48 @@ margin: 0;
 }
 
 /* Especial */
+
+/*
+//	NAVBAR
+*/
+.navbar-default {
+    background-color: #fff;
+    height: 120px;
+    border-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #F7B617;
+    background-color: transparent;
+}
+.navbar-brand {
+	padding: 0
+}
+.navbar-default .navbar-nav>li>a {
+    color: #2B2B2B;
+    padding-top: 10px;
+    font-weight: 400;
+}
+
+/*
+// HEADER
+*/
+header {
+	background-image: url("../img/taxi.jpg");
+	position: relative;
+	background-size: cover;
+	background-position: bottom;
+	background-attachment: fixed;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: row;
+}
+header .box {
+	color: #fff;
+	background-color: #F7B617;
+}
