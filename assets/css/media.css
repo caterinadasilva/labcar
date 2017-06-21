@@ -36,4 +36,12 @@
 	#app h3 {
 		margin: 2.5em 0 0;
 	}
+	footer .flex {
+	flex-direction: column;
+    height: 260px;
+    justify-content: flex-start;
+	}
+	footer .flex > * {
+		margin-bottom: 1em;
+	}
 }

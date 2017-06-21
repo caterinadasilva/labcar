@@ -9,6 +9,8 @@
 	<meta name="author" content="Caterina Da Silva">
 	<!-- Bootstrap Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Fontawesome -->
+	<script src="https://use.fontawesome.com/d2c9b2c5c1.js"></script>
 	<!-- Font icon -->
 	<link rel="stylesheet" type="text/css" href="assets/css/font.css">
 	<!-- Styles -->
@@ -32,9 +34,9 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Viaja</a></li>
-				<li><a href="#">Conduce</a></li>
-				<li><a href="#">Inicia Sesión</a></li>
+				<li><a href="#app">Viaja</a></li>
+				<li><a href="#driver">Conduce</a></li>
+				<li><a href="#g-maps">Inicia Sesión</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 		</div><!-- /.container -->
@@ -88,14 +90,87 @@
 <section id="g-map">
 	<div class="container">
 		<div class="row">
-
+			<div class="text col-xs-12 col-sm-4">
+				<h2>Tarifas</h2>
+				<p>Consulta las tarifas de LabCar aquí</p>
+				<form>
+					<div class="form-group">
+						<label class="sr-only" for="origen">Ingrese punto de partida</label>
+						<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+						<input type="text" class="form-control" id="origin-input" placeholder="Ingrese punto de partida">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="destino">Ingrese un destino</label>
+						<i class="fa fa-paper-plane" aria-hidden="true"></i>
+						<input type="text" class="form-control" id="destination-input" placeholder="Ingrese un destino">
+					</div>
+					<button id="route" type="submit" class="btn btn-primary">Trazar ruta</button>
+				</form>
+			</div>
+			<div class="map-box hidden-xs col-sm-6 col-sm-offset-2">
+				<div id="map"></div>
+			</div>
 		</div>
 	</div>
 </section>
 <footer>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-xs-12 foo-top">
+				<img src="assets/img/logo-blanco.png" alt="">
+			</div>
+		</div>
+		<div class="row">
+			<div class="flex hidden-xs col-sm-3">
+				<ul class="social">
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-apple" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-play" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3">
+				<ul class="list">
+					<li><a href="#">Viaja</a></li>
+					<li><a href="#">Conduce</a></li>
+					<li><a href="#">Ciudades</a></li>
+					<li><a href="#">Tarifas</a></li>
+					<li><a href="#">Entregas</a></li>
+					<li><a href="#">Cómo funciona</a></li>
+					<li><a href="#">Países</a></li>
+					<li><a href="#">Seguridad</a></li>
+				</ul>
+			</div>
+			<div class="hidden-xs col-sm-3">
+				<ul class="list">
+					<li><a href="#">Oportunidades</a></li>
+					<li><a href="#">Nuestra historia</a></li>
+					<li><a href="#">API de LabCar</a></li>
+					<li><a href="#">Eventos</a></li>
+					<li><a href="#">Desarrolladores</a></li>
+					<li><a href="#">Servicios</a></li>
+					<li><a href="#">Laboratoria</a></li>
+					<li><a href="#">Coders</a></li>
+				</ul>
+			</div>
+			<div class="flex col-xs-6 col-sm-3">
+				<ul class="social hidden-sm hidden-md hidden-lg">
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-apple" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-play" aria-hidden="true"></i></a></li>
+				</ul>
+				<ul class="stores">
+					<li><a href="#"><img src="assets/img/app-store.png" alt=""></a></li>
+					<li><a href="#"><img src="assets/img/google-play.png" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 foo-bot">
+				<p>&copy 2017 LabCar technologies Inc.</p>
 				<small>Desarrollado por Caterina Da Silva</small>
 			</div>
 		</div>
@@ -105,5 +180,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Bootstrap Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqUl75jFlyAwUZTK1C3Fxe2HIEMHBjTnI&libraries=places&callback=initMap"
+        async defer></script>
 <script src="assets/js/script.js" ></script>
 </html>
