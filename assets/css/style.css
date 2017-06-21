@@ -114,6 +114,23 @@ border-color: #fff;
     font-size: 120%;
     font-weight: 700;
 }
+.btn-secondary {
+    color: #fff;
+    background-color: #F7B617;
+    border-color: #F7B617;
+    font-size: 120%;
+    font-weight: 700;
+    width: 80%;
+}
+.btn-secondary:hover, 
+.btn-secondary:active, 
+.btn-secondary:focus {
+    color: #2b2b2b;
+    background-color: #fff;
+    border-color: #fff;
+    font-size: 120%;
+    font-weight: 700;
+}
 p {
 font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
@@ -244,4 +261,27 @@ header .box.xs {
 }
 #app .box .left h2 {
 	margin: 2em 0 1em;
+}
+/*
+//	DRIVER
+*/
+#driver {
+	background-image: url("../img/conduce.jpg");
+	position: relative;
+	background-size: cover;
+	background-position: bottom;
+	background-attachment: fixed;
+	height: 50vh;
+}
+#driver .shadow-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 50vh;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#driver .shadow-box p {
+    margin: 2em 0 1em;
+    line-height: 140%;
 }
